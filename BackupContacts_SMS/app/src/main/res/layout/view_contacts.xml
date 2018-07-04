@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ViewListText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Information"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+    <ListView
+        android:id="@+id/viewList"
+        android:layout_below="@+id/ViewListText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:weightSum="1">
+
+        <Button
+            android:id="@+id/restore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.5"
+            android:text="Restore"
+            />
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="0.5"
+                android:text="Delete"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

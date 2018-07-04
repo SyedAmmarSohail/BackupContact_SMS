@@ -1,0 +1,64 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 112721920 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2627), pid=4115, tid=0x00007fda58df5700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_76-b03) (build 1.8.0_76-release-b03)
+# Java VM: OpenJDK 64-Bit Server VM (25.76-b03 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fda70077800):  VMThread [stack: 0x00007fda58cf5000,0x00007fda58df6000] [id=4125]
+
+Stack: [0x00007fda58cf5000,0x00007fda58df6000],  sp=0x00007fda58df4490,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x9d9fcd]  VMError::report_and_die()+0x15d
+V  [libjvm.so+0x4b4d4a]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8a
+V  [libjvm.so+0x845190]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0xf0
+V  [libjvm.so+0x83fcbf]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x1f
+V  [libjvm.so+0x8b4d9b]  PSVirtualSpace::expand_by(unsigned long)+0x5b
+V  [libjvm.so+0x8a5b7b]  PSOldGen::expand_by(unsigned long) [clone .part.109]+0x1b
+V  [libjvm.so+0x8a5d3b]  PSOldGen::expand(unsigned long) [clone .part.111]+0xdb
+V  [libjvm.so+0x8a6618]  PSOldGen::resize(unsigned long)+0x188
+V  [libjvm.so+0x8abc2c]  PSParallelCompact::invoke_no_policy(bool)+0x97c
+V  [libjvm.so+0x8b2d3d]  PSScavenge::invoke()+0x17d
+V  [libjvm.so+0x8681f3]  ParallelScavengeHeap::failed_mem_allocate(unsigned long)+0x63
+V  [libjvm.so+0x9dba94]  VM_ParallelGCFailedAllocation::doit()+0x84
+V  [libjvm.so+0x9dfe47]  VM_Operation::evaluate()+0x47
+V  [libjvm.so+0x9de908]  VMThread::evaluate_operation(VM_Operation*)+0x2c8
+V  [libjvm.so+0x9ded89]  VMThread::loop()+0x219
+V  [libjvm.so+0x9df1d2]  VMThread::run()+0x72
+V  [libjvm.so+0x8425b2]  java_start(Thread*)+0xf2
+
+VM_Operation (0x00007fda53efd1a0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00007fda70173800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fda70177000 JavaThread "pool-2-thread-4" [_thread_blocked, id=4143, stack(0x00007fda53bfc000,0x00007fda53cfd000)]
+  0x00007fda70175000 JavaThread "pool-2-thread-3" [_thread_blocked, id=4142, stack(0x00007fda53cfd000,0x00007fda53dfe000)]
+  0x00007fda70173800 JavaThread "pool-2-thread-2" [_thread_blocked, id=4141, stack(0x00007fda53dfe000,0x00007fda53eff000)]
+  0x00007fda70172800 JavaThread "pool-3-thread-1" [_thread_blocked, id=4140, stack(0x00007fda53eff000,0x00007fda54000000)]
+  0x00007fda70170800 JavaThread "pool-2-thread-1" [_thread_blocked, id=4139, stack(0x00007fda58069000,0x00007fda5816a000)]
+  0x00007fda700c8800 JavaThread "Service Thread" daemon [_thread_blocked, id=4132, stack(0x00007fda582e5000,0x00007fda583e6000)]
+  0x00007fda700bd800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=4131, stack(0x00007fda583e6000,0x00007fda584e7000)]
+  0x00007fda700bb800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=4130, stack(0x00007fda584e7000,0x00007fda585e8000)]
+  0x00007fda700b9000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=4129, stack(0x00007fda585e8000,0x00007fda586e9000)]
+  0x00007fda700b7800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4128, stack(0x00007fda586e9000,0x00007fda

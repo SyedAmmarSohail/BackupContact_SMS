@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "31302072316",
+    "firebase_url": "https://backupcontactssms.firebaseio.com",
+    "project_id": "backupcontactssms",
+    "storage_bucket": "backupcontactssms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31302072316:android:88ac29e222359381",
+        "android_client_info": {
+          "package_name": "com.example.ammar.backupcontacts_sms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31302072316-i2du62gun3go7h3kt3e383jq38h0niik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ammar.backupcontacts_sms",
+            "certificate_hash": "2F950E71A6892B6CDFE9BD7A9AC5AE1AF8B9353C"
+          }
+        },
+        {
+          "client_id": "31302072316-0h9bppsjn8deo5dsecr5ht1dgmqg03b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiNEWDZSwhnLHA4Po_W3AmCoYUVlDJAAE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31302072316-0h9bppsjn8deo5dsecr5ht1dgmqg03b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
